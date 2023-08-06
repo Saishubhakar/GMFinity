@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navul">
+        <a href="index.htm" class="li"><li class="navli">Home</li></a>
+        <a href="signUp.htm" class="li"><li class="navli">SignUp/Login</li></a>
+        <a href="addmovie.htm" class="li"><li class="navli">AddMovie</li></a>
+        <a href="getMovies.htm" class="li"><li class="navli">GetMovies</li></a>
+      </ul>
+    </nav>
+
+    <div class="signDiv">
+      <div class="innersignDiv">
+        <form id="Form" class="Form">
+          <h1 class="signUpheading">signUp</h1>
+          <input
+            type="text"
+            class="input"
+            id="nameId"
+            placeholder="Username"
+            name="name"
+          />
+          <input
+            type="text"
+            class="input"
+            id="emailId"
+            placeholder="Email"
+            name="email"
+          />
+          <input
+            type="text"
+            class="input"
+            id="passwordId"
+            placeholder="Password"
+            name="password"
+          />
+
+          <div class="budiv">
+            <button class="button">SignUp</button>
+          </div>
+          <p class="para">
+            Already have an account - <a href="login.htm">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="signUp.js"></script>
+  </body>
+</html>

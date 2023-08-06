@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    font-size: 16px;
+}
+
+.detail1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    background-color: #000000;
+    color: #fff;
+    height: 11vh;
+}
+
+.navul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+    height: 100%;
+}
+
+
+.navli{
+    color: white;
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navli:hover{
+    text-decoration: underline;
+    color: green;
+}
+
+#moviesSearch{
+    padding: 4px;
+}
+
+.signDiv{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innersignDiv{
+    background-color: #eee8e8;
+    height: 80%;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    text-align: center;
+}
+
+.Form{
+    height: 100%;
+}
+
+.head1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.input{
+    background-color: transparent;
+    font-size: 16px;
+    padding: 10px;
+    color: #000000;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #000000;
+    margin: 10px 0px;
+}
+
+
+.budiv{
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.button{
+    width: 20vh;
+    cursor: pointer;
+    height: 5vh;
+    background-color: rgb(49, 49, 141);
+    color: #fff;
+}
+
+.button:hover{
+    background-color: green;
+    transition: all ease-in-out 0.15s;
+}
+
+
+.para{
+    text-align:center;
+}
+
+
+
+.LoginDiv{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerLoginDiv{
+    text-align: center;
+    background-color: #eee8e8;
+    height: 60%;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;    
+}

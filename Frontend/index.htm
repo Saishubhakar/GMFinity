@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-PRrgQVJ8NNHGieOA1grGdCTIt4h21CzJs6SnWH4YMQ6G5F5+IEzOHz67L4SQaF0o"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <ul class="navul">
+        <a href="index.htm" class="li"><li class="navli">Home</li></a>
+        <a href="signUp.htm" class="li"><li class="navli">SignUp/Login</li></a>
+        <a href="addmovie.htm" class="li"><li class="navli">AddMovie</li></a>
+        <a href="getMovies.htm" class="li"><li class="navli">GetMovies</li></a>
+      </ul>
+    </nav>
+
+
+    <h1>Movies website</h1>
+
+    <form id="movies" autocomplete="off">
+      <div class="group">
+        <label for="Movie">Movie names</label>
+        <input placeholder="movie name" id="moviesSearch" />
+      </div>
+
+      <button class="btn btn-success">Search</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="moviesDiv"></div>
+  </body>
+  <script src="ks.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      let key = "f8252948";
+      $("#movies").submit(function (e) {
+        e.preventDefault();
+
+        let movie = $("#moviesSearch").val();
+        let url = "https://www.omdbapi.com/?i=tt3896198&apikey=f8252948";
+        let result = " ";
+
+        $.ajax({
+          method: "GET",
+          url: url + "&t=" + movie,
+          success: function (data) {
+            console.log(data);
+            console.log(data.Title);
+
+            result = ` 
+
+            <div class="card" style="width: 18rem;">
+                <img src="${data.Poster}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title title">${data.Title}</h5>
+                    <div class="detail1">
+                        <p className="card-text text">${data.Metascore}/100</p>
+                        <p className="card-text text">${data.imdbRating}</p>
+                        <p className="card-text text">${data.Runtime}</p>
+                    </div>
+                    <p class="card-text">${data.Language}</p>
+
+                    
+                </div>
+            </div>
+
+
+                    `;
+
+            $("#result").html(result);
+          },
+        });
+      });
+    });
+  </script>
+</html>

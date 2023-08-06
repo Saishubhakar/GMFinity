@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navul">
+        <a href="index.htm" class="li"><li class="navli">Home</li></a>
+        <a href="signUp.htm" class="li"><li class="navli">SignUp/Login</li></a>
+        <a href="addmovie.htm" class="li"><li class="navli">AddMovie</li></a>
+        <a href="getMovies.htm" class="li"><li class="navli">GetMovies</li></a>
+      </ul>
+    </nav>
+
+    <div class="LoginDiv">
+      <div class="innerLoginDiv">
+        <form id="Form" class="Form">
+          <h1 class="signUpheading">Add Movies to your list</h1>
+
+          <input
+            type="text"
+            class="input"
+            id="emailId"
+            placeholder="Email"
+            name="email"
+          />
+
+          <input
+            type="text"
+            class="input"
+            id="favMoviesId"
+            placeholder="Movie you want to add"
+            name="FavMovies"
+          />
+
+          <div class="budiv">
+            <button class="button">SignUp</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="addmovie.js"></script>
+  </body>
+</html>
