@@ -12,10 +12,6 @@ Form.addEventListener("submit", (e)=>{
         loginUser(email, password)
         alert("Logged in")
 
-        if(alert){
-            window.location.href = "http://127.0.0.1:5500/Frontend/index.htm"
-        }
-
     } catch (error) {
         alert("Please enter valid credentials please")
     }
